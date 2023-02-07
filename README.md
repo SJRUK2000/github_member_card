@@ -4,7 +4,7 @@
 This is a React Web App that displays a directory of GitHub members using information from the GitHub API. It has been created using React, Vite and Styled Components.
 
 ## Getting Started
-
+Feel free to watch this [Loom Video](https://www.loom.com/share/cfe6b0c0cc4348fa8749fb1c71d56c9d) to get a basic understanding of the application. 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
