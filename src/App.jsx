@@ -4,7 +4,7 @@ import MemberDirectory from "./components/MemberDirectory";
 function App() {
   return (
     <div>
-      <h1>GitHub Member Directory</h1>
+      <h1>GitHub Member Card Directory</h1>
       <MemberDirectory />
     </div>
   );
