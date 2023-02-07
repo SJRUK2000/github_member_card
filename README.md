@@ -9,7 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-You need to have the following installed on your local machine:
+You need to have the following installed on your local machine and/or basic knowledge of:
 
 - Node.js
 - NPM
