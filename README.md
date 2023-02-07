@@ -35,4 +35,4 @@ Install this project with npm
 
 - Vite was used as the development environment because it is faster and more efficient compared to other traditional setups like Create React App.
 - The styled components library was used for styling the components because it provides a way to write actual CSS code within the component file, making it easier to manage the styles and component together.
-- The GitHub API was used to fetch information about the members because it is a reliable and easy to use API that provides the data needed for this project.
+- The GitHub API was used to fetch information about the members because it is a reliable and easy to use API that provides the data needed for this project. NOTE: The GitHub API does in-fact require the use of an Auth Key in-order to see users emails and to allow for slightly more requests per hour to The API. This key only allows the viewing of emails which are publicly available on all GitHub Profiles that allow it and thus does not pose a large security risk. 
