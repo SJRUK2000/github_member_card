@@ -46,7 +46,7 @@ const MemberCard = ({ member }) => {
       try {
         const response = await fetch(`https://api.github.com/users/${member.login}`, {
           headers: {
-            Authorization: 'Bearer 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'
+            Authorization: 'Bearer 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'
           }
         });
         if (!response.ok) {
