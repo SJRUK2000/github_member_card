@@ -22,13 +22,13 @@ git clone https://github.com/SJRUK2000/github_member_card.git
 cd github_member_card
 ```
 
-###Front-End
+### Front-End
 ```bash
   cd .\client\
   npm install
   npm run dev
 ```
-###Back-End (In a Seperate Terminal)
+### Back-End (In a Seperate Terminal)
 ```bash
   cd .\server\
   npm install
