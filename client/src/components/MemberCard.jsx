@@ -41,28 +41,34 @@ const MemberCard = ({ member }) => {
     as a path parameter in the API URL. 
   */
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await fetch(`https://api.github.com/users/${member.login}`, {
-          headers: {
-            Authorization: 'Bearer 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'
+    useEffect(() => {
+      const fetchUser = async () => {
+        try {
+          const response = await fetch(`http://localhost:5000/api/github`);
+          if (!response.ok) {
+            throw new Error(`Request failed with status code: ${response.status}`);
           }
-        });
-        if (!response.ok) {
-          throw new Error(`Request failed with status code: ${response.status}`);
+          const { apiKey } = await response.json();
+          const res = await fetch(`https://api.github.com/users/${member.login}`, {
+            headers: {
+              Authorization: `Bearer ${apiKey}`
+            }
+          });
+          if (!res.ok) {
+            throw new Error(`Request failed with status code: ${res.status}`);
+          }
+          /* Store the API res data in the user state */
+          const data = await res.json();
+          setUser(data);
+        } catch (error) {
+          /* Store the error message in the error state */
+          setError(error.message);
         }
-        /* Store the API response data in the user state */
-        const data = await response.json();
-        setUser(data);
-      } catch (error) {
-        /* Store the error message in the error state */
-        setError(error.message);
-      }
-    };
-    fetchUser();
-    /* fetch user data from API when component is first rendered and when `member` prop changes */
-  }, [member]);
+      };
+      fetchUser();
+      /* fetch user data from API when component is first rendered and when `member` prop changes */
+    }, [member]);
+    
 
   return (
     <MemberCardWrapper>
